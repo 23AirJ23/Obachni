@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Авторизація</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240330190042">
+	<link rel="shortcut icon" href="#">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content content">
+					<!-- <button data-close type="button" class="popup__close"></button> -->
+					<div class="content__logo"><picture><source srcset="img/obachni.webp" type="image/webp"><img src="img/obachni.png" alt="Logo"></picture></div>
+					<form action="files/sendmail/sendmail.php" method="POST" class="content__form">
+						<label for="form[email]">Введіть Ваш E-mail</label>
+						<input class="input" type="text" name="form[email]" data-required="email" data-error="Неправильно введений E-mail" placeholder="E-mail">
+						<button type="submit" class="content__button button">Оновити пароль</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<main class="page">
+			<div class="page__info info">
+				<div class="info__container">
+					<div class="info__item item">
+						<div class="item__logo"><picture><source srcset="img/obachni.webp" type="image/webp"><img src="img/obachni.png" alt="Логотип сайту"></picture></div>
+						<form action="#" class="item__form form">
+							<div class="form__line">
+								<label for="number">Номер консультанта</label>
+								<input autocomplete="on" type="text" name="number" data-error="Помилка" placeholder="Введіть номер" class="input">
+							</div>
+							<div class="form__line line">
+								<label for="password">Пароль</label>
+								<div class="line__password">
+									<input autocomplete="off" type="password" name="password" data-error="Помилка" class="input input--inp" placeholder="Ваш пароль">
+									<button type="button" class="form__viewpass"></button>
+								</div>
+							</div>
+							<!-- <a href="#" data-popup="#popup">Оновити пароль?</a> -->
+							<button type="button" class="form__button button">Увійти</button>
+						</form>
+					</div>
+					<div class="info__image-ibg"><img src="img/Illustration.svg" alt="Картинка на сторінці авторизації">
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240330190042"></script>
+</body>
+
+</html>
