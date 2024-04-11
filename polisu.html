@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240330190042">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240411173619">
 	<link rel="shortcut icon" href="#">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,7 @@
 						</nav>
 					</div>
 					<div class="nav__user user">
-						<div class="user__foto"><picture><source srcset="img/foto.webp" type="image/webp"><img src="img/foto.jpeg" alt="Фото профілю"></picture></div>
+						<div class="user__foto"><picture><source srcset="img/male.webp" type="image/webp"><img src="img/male.png" alt="Фото профілю"></picture></div>
 						<div class="user__info info">
 							<p class="info__name">EasinArafat ArafatArafat</p>
 							<p class="info__num">400-001-002</p>
@@ -58,6 +58,50 @@
 					<div class="items__title title">
 						<h1>Власні поліси</h1>
 					</div>
+					<!-- Додай оцей блок на цю сторінку. ---------------------------------->
+					<div data-one-select class="choose">
+						<select name="year[]" data-class-modif="form">
+							<option value="1" selected>2023р.</option>
+							<option value="2">2024р.</option>
+						</select>
+						<select name="month[]" data-class-modif="form">
+							<option value="1" selected>Січень</option>
+							<option value="2">Лютий</option>
+							<option value="3">Березень</option>
+							<option value="4">Квітень</option>
+							<option value="2">Травень</option>
+							<option value="3">Червень</option>
+							<option value="4">Липень</option>
+							<option value="2">Серпень</option>
+							<option value="3">Вересень</option>
+							<option value="4">Жовтень</option>
+							<option value="2">Листопад</option>
+							<option value="3">Грудень</option>
+						</select>
+						<div class="checkbox custom-checkbox">
+							<div class="custom-checkbox__item">
+								<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Скоро до сплати</span></label>
+							</div>
+							<div class="custom-checkbox__item">
+								<input id="c_2" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_2" class="checkbox__label"><span class="checkbox__text">Активні</span></label>
+							</div>
+							<div class="custom-checkbox__item">
+								<input id="c_3" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_3" class="checkbox__label"><span class="checkbox__text">Сторновані</span></label>
+							</div>
+							<div class="custom-checkbox__item">
+								<input id="c_4" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_4" class="checkbox__label"><span class="checkbox__text">Неактивні</span></label>
+							</div>
+							<div class="custom-checkbox__item">
+								<input id="c_5" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_5" class="checkbox__label"><span class="checkbox__text">Протерміновані</span></label>
+							</div>
+						</div>
+					</div>
+					<!-- Тут закінчується блок, яий треба додати----------------------------------->
 					<ul class="items__heading heading">
 						<li>№ заяви</li>
 						<li>Номер поліса</li>
@@ -70,7 +114,7 @@
 					<div data-spollers class="spollers items__lines lines">
 						<details class="spollers__item">
 							<summary class="spollers__title lines__item item-line">
-								<div class="item-line__info">25</div>
+								<div class="item-line__info">2545454646</div>
 								<div class="item-line__info">100-345-12</div>
 								<div class="item-line__info">Якесь середнє ім'я</div>
 								<div class="item-line__info item-line__info--date _icon-Calendar">10.05.2023</div>
@@ -164,7 +208,7 @@
 	</div>
 	</main>
 	</div>
-	<script src="js/app.min.js?_v=20240330190042"></script>
+	<script src="js/app.min.js?_v=20240411173619"></script>
 </body>
 
 </html>

@@ -228,6 +228,53 @@ h6 {
 Сніппет (HTML): cnt
 */
 
+.checkbox {
+  position: relative;
+}
+
+.checkbox:not(:last-child) {
+  margin-bottom: em(5);
+}
+
+.checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkbox__input:checked + .checkbox__label:before {
+  background: #605BFF;
+}
+
+.checkbox__label {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  gap: 0.3125rem;
+}
+
+.checkbox__label:before {
+  content: "";
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #676666;
+  border-radius: 0.625rem;
+}
+
+.checkbox__text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .select {
   min-width: 0;
   position: relative;
@@ -244,7 +291,7 @@ h6 {
   background-color: #fff;
   cursor: pointer;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -596,6 +643,33 @@ summary::-webkit-details-marker {
   margin-bottom: 1.25rem;
 }
 
+.choose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+  margin-bottom: 0.9375rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.choose select {
+  text-align: center;
+  padding: 0.3125rem 1.25rem;
+}
+
+.custom-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -815,6 +889,7 @@ summary::-webkit-details-marker {
           flex-direction: column;
   background-color: #fff;
   padding: 3.125rem 0.625rem;
+  min-width: 21%;
 }
 
 .person__contacts {
@@ -1071,6 +1146,17 @@ summary::-webkit-details-marker {
       align-self: center;
 }
 
+.item-result__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+}
+
 .info__container {
   display: -ms-grid;
   display: grid;
@@ -1278,8 +1364,8 @@ summary::-webkit-details-marker {
 .items__heading {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50px (1fr)[5] 30px;
-  grid-template-columns: 50px repeat(5, 1fr) 30px;
+  -ms-grid-columns: (1fr)[6] 30px;
+  grid-template-columns: repeat(6, 1fr) 30px;
   padding-left: 0.625rem;
   text-align: center;
   color: #676666;
@@ -1299,13 +1385,16 @@ summary::-webkit-details-marker {
 .lines__item {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50px (1fr)[5] 30px;
-  grid-template-columns: 50px repeat(5, 1fr) 30px;
+  -ms-grid-columns: (1fr)[6] 30px;
+  grid-template-columns: repeat(6, 1fr) 30px;
   padding-left: 0.625rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   min-height: 2.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .item-line {
@@ -1685,6 +1774,17 @@ summary::-webkit-details-marker {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.item-result__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
 }
 
 .agent__container {
@@ -2191,17 +2291,6 @@ summary::-webkit-details-marker {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .items__heading {
-    -ms-grid-columns: 40px (1fr)[5] 30px;
-    grid-template-columns: 40px repeat(5, 1fr) 30px;
-    gap: 0rem;
-  }
-
-  .lines__item {
-    -ms-grid-columns: 40px (1fr)[5] 30px;
-    grid-template-columns: 40px repeat(5, 1fr) 30px;
-  }
-
   .agent-child {
     -ms-grid-columns: 30px (1fr)[5] 30px;
     grid-template-columns: 30px repeat(5, 1fr) 30px;
@@ -2300,6 +2389,12 @@ summary::-webkit-details-marker {
             transform: rotate(45deg);
   }
 
+  .custom-checkbox {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .header__logo {
     z-index: 10;
   }
@@ -2377,8 +2472,8 @@ summary::-webkit-details-marker {
   }
 
   .items__heading {
-    -ms-grid-columns: 40px (1fr)[3] 30px;
-    grid-template-columns: 40px repeat(3, 1fr) 30px;
+    -ms-grid-columns: (1fr)[4] 30px;
+    grid-template-columns: repeat(4, 1fr) 30px;
     justify-items: center;
     text-align: center;
     padding-left: 0rem;
@@ -2393,8 +2488,8 @@ summary::-webkit-details-marker {
   }
 
   .lines__item {
-    -ms-grid-columns: 30px (1fr)[3] 30px;
-    grid-template-columns: 30px repeat(3, 1fr) 30px;
+    -ms-grid-columns: (1fr)[4] 30px;
+    grid-template-columns: repeat(4, 1fr) 30px;
     padding-left: 0rem;
   }
 
@@ -2490,6 +2585,13 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 29.99875em) {
+  .choose {
+    gap: 1.25rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .items-download__title {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3159,6 +3261,10 @@ summary::-webkit-details-marker {
 }
 
 @media (any-hover: hover) {
+  .checkbox__label:hover {
+    color: #605BFF;
+  }
+
   .select__option:hover {
     background: #605BFF;
     color: #fff;
@@ -3229,6 +3335,7 @@ summary::-webkit-details-marker {
 
   .item-result a:hover {
     color: #605BFF;
+    cursor: pointer;
   }
 
   .form a:hover {
@@ -3240,6 +3347,7 @@ summary::-webkit-details-marker {
             filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.35));
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+    cursor: pointer;
   }
 
   .agent-child__link:hover {
@@ -3271,5 +3379,6 @@ summary::-webkit-details-marker {
 
   .item-result a:hover {
     color: #605BFF;
+    cursor: pointer;
   }
 }
